@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HealthApp.Data
 {
-    class PrimaryTableSpirit
+    public class PrimaryTableSpirit
     {
         [Key]
         public int HowIViewMe { get; set; }

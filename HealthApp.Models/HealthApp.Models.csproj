@@ -41,7 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PrimaryTableFitness\PrimaryTableFitnessCreate.cs" />
+    <Compile Include="PrimaryTableFitness\PrimaryTableFitnessDetail.cs" />
+    <Compile Include="PrimaryTableFitness\PrimaryTableFitnessEdit.cs" />
+    <Compile Include="PrimaryTableFitness\PrimaryTableFitnessListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PrimaryTableFood\" />
+    <Folder Include="PrimaryTableSpirit\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
