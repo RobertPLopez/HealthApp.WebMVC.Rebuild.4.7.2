@@ -1,4 +1,5 @@
-﻿using HealthApp.Models.PrimaryTableFood;
+﻿using HealthApp.Data;
+using HealthApp.Models.PrimaryTableFood;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace HealthApp.Services
         public bool CreatePrimaryFoodTable(FoodCreate model)
         {
             var entity =
-                new FoodCreate()
+                new PrimaryTableFood()
                 {
                     FoodId = model.FoodId,
                     FoodName = model.FoodName,
@@ -32,7 +33,7 @@ namespace HealthApp.Services
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.FitnessTables.Add(entity); //I dont understand why this logic doesnt work. The var entity contains all of the data in the create class to create 1 instance.
+                ctx.FoodTables.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
@@ -64,7 +65,7 @@ namespace HealthApp.Services
         }
 
         //Not quite sure what the error here relates to 
-        public GetPrimaryTableFoodById(int id)
+        public FoodDetail GetPrimaryTableFoodById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {

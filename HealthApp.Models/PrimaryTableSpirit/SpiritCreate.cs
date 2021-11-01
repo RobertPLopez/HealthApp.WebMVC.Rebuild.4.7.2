@@ -13,6 +13,8 @@ namespace HealthApp.Models.PrimaryTableSpirit
         [Display(Name = "On a scale of 1-10 please rate how you view yourself.")]
         public int HowIViewMe { get; set; }
         [Required]
+        public Guid OwnerId { get; set; }
+        [Required]
         [Display(Name = "On a scale of 1-10 please rate how you view others.")]
         public int HowIViewOthers { get; set; }
         [Required]

@@ -1,4 +1,5 @@
-﻿using HealthApp.Models.PrimaryTableFitness;
+﻿using HealthApp.Data;
+using HealthApp.Models.PrimaryTableFitness;
 using HealthApp.Models.PrimaryTableSpirit;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ namespace HealthApp.Services
         public bool CreateSpiritTable(SpiritCreate model)
         {
             var entity =
-                new SpiritCreate()
+                new PrimaryTableSpirit()
                 {
                     HowIViewMe = model.HowIViewMe,
                     HowIViewOthers = model.HowIViewOthers,
@@ -35,7 +36,7 @@ namespace HealthApp.Services
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.SpiritTables.Add(entity); //same reason as the primary fitness table;
+                ctx.SpiritTables.Add(entity); 
                 return ctx.SaveChanges() == 1;
             }
         }
@@ -67,7 +68,7 @@ namespace HealthApp.Services
             }
         }
 
-        public GetPrimarySpiritTableById(int id)
+        public SpiritDetail GetPrimarySpiritTableById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -77,7 +78,7 @@ namespace HealthApp.Services
                     .Single(e => e.HowIViewMe == id && e.OwnerId == _userId);
 
                 return
-                    new PrimaryTableSpirit
+                    new SpiritDetail
                     {
                         HowIViewMe = entity.HowIViewMe,
                         HowIViewOthers = entity.HowIViewOthers,

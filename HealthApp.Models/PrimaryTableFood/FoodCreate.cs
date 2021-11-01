@@ -13,6 +13,8 @@ namespace HealthApp.Models.PrimaryTableFood
         [Display(Name = "This is your food meal id.")]
         public int FoodId { get; set; }
         [Required]
+        public Guid OwnerId { get; set; }
+        [Required]
         [Display(Name = "Write the name of the food you ate.")]
         public string FoodName { get; set; }
         [Required]
