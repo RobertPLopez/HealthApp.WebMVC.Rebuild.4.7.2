@@ -52,16 +52,63 @@ namespace HealthApp.WebMVC.Controllers
             PrimaryTableSpiritDetails(int id)
         {
             var svc = CreateSpiritTableServices();
-            var model = svc.GetPrimaryTableSpiritById(id);
+            var model = svc.GetPrimarySpiritTableById(id);
 
             return View(model);
         }
+
+        //Get: PrimaryTableSpirit Edit
+        public ActionResult PrimaryTableSpiritEdit(int id)
+        {
+            var service = CreateSpiritTableServices();
+            var detail = service.GetPrimarySpiritTableById(id);
+            var model =
+                new SpiritEdit
+                {
+                    HowIViewMe = detail.HowIViewMe,
+                    HowIViewOthers = detail.HowIViewOthers,
+                    HowOtherPerceiveMe = detail.HowOtherPerceiveMe,
+                    MySocialCircle = detail.MySocialCircle,
+                    MyRestHours = detail.MyRestHours,
+                    OutsideMotivation = detail.OutsideMotivation,
+                    InternalMotivaiton = detail.InternalMotivaiton,
+                    CreatedUtc = detail.CreatedUtc,
+                    ModifiedUtc = DateTimeOffset.Now
+                };
+            return View(model);
+        }
+
+        //Get: PrimaryTableSpirit Overload Edit
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult PrimaryTableSpiritEdit(int id, SpiritEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.HowIViewMe != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateSpiritTableServices();
+
+            if (service.UpdateSpiritTable(model)) //not sure why this is erroring out
+            {
+                //TempData["SaveResult"] = "Your plan has been updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your plan couldnt be edited.");
+            return View();
+        }
+
         //Get: PrimarySpiritTable Delete
         [ActionName("Delete")]
         public ActionResult PrimaryTableSpiritDelete(int id)
         {
             var svc = CreateSpiritTableServices();
-            var model = svc.GetPrimaryTableSpiritById(id);
+            var model = svc.GetPrimarySpiritTableById(id);
 
             return View(model);
         }

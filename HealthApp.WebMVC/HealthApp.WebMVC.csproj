@@ -258,6 +258,10 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HealthApp.Data\HealthApp.Data.csproj">
+      <Project>{0BDC1E4C-80BA-410D-ABFA-0F51AFE566E0}</Project>
+      <Name>HealthApp.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HealthApp.Models\HealthApp.Models.csproj">
       <Project>{654A6B07-E72F-4398-BB0F-B8E08E0B550A}</Project>
       <Name>HealthApp.Models</Name>

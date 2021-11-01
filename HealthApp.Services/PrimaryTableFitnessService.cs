@@ -1,11 +1,12 @@
 ﻿using HealthApp.Data;
 using HealthApp.Models.PrimaryTableFitness;
+using HealthApp.WebMVC.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static HealthApp.WebMVC.Models.ApplicationUser;
+using static HealthApp.WebMVC.Data.ApplicationUser;
 
 namespace HealthApp.Services
 {

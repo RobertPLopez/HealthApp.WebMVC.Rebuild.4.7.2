@@ -65,6 +65,50 @@ namespace HealthApp.WebMVC.Controllers
             return View(model);
         }
 
+        //Get: PrimaryTableFitness Edit
+        public ActionResult PrimaryTableFoodEdit(int id)
+        {
+            var service = CreateFoodTableServices();
+            var detail = service.GetPrimaryTableFoodById(id);
+            var model =
+                new FoodEdit
+                {
+                    FoodId = detail.FoodId,
+                    FoodName = detail.FoodName,
+                    TotalCaloriesConsumed = detail.TotalCaloriesConsumed,
+                    FoodContent = detail.FoodContent,
+                    DailyWeight = detail.DailyWeight,
+                    CupsWaterDrank = detail.CupsWaterDrank,
+                    CreatedUtc = detail.CreatedUtc,
+                };
+            return View(model);
+        }
+
+        //Get: PrimaryTableFitness Overload Edit
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult PrimaryTableFoodEdit(int id, FoodEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.FoodId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateFoodTableServices();
+
+            if (service.UpdatePrimaryTableFood(model)) //not sure why this is erroring out
+            {
+                //TempData["SaveResult"] = "Your plan has been updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your plan couldnt be edited.");
+            return View();
+        }
+
         //Get: PrimaryFoodTable Delete Overload
         [HttpPost]
         [ActionName("Delete")]

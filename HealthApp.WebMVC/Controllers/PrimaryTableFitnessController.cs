@@ -71,30 +71,30 @@ namespace HealthApp.WebMVC.Controllers
             return View(model);
         }
 
-        ////Get: PrimaryTableFitness OVerload Edit
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult PrimaryTableFitnessEdit(int id, PrimaryTableFitnessEdit model)
-        //{
-        //    if (!ModelState.IsValid) return View(model);
+        //Get: PrimaryTableFitness Overload Edit
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult PrimaryTableFitnessEdit(int id, PrimaryTableFitnessEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
 
-        //    if (model.WorkoutId! = id)
-        //    {
-        //        ModelState.AddModelError("", "Id Mismatch");
-        //        return View(model);
-        //    }
+            if (model.WorkoutId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
 
-        //    var service = CreatePrimaryFitnessTable(); 
+            var service = CreatePrimaryTableFitnessTableServices();
 
-        //    if (service.UpdatePrimaryTableFitness()) //not sure why this is erroring out
-        //    {
-        //        //TempData["SaveResult"] = "Your plan has been updated.";
-        //        return RedirectToAction("Index");
-        //    }
+            if (service.UpdatePrimaryTableFitness(model)) //not sure why this is erroring out
+            {
+                //TempData["SaveResult"] = "Your plan has been updated.";
+                return RedirectToAction("Index");
+            }
 
-        //    ModelState.AddModelError("", "Your plan couldnt be edited.");
-        //    return View();
-        //}
+            ModelState.AddModelError("", "Your plan couldnt be edited.");
+            return View();
+        }
 
         //Get: PrimaryTableFitness Delete
         [ActionName("Delete")]
