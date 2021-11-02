@@ -170,11 +170,13 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PrimaryTableFitnessController.cs" />
+    <Compile Include="Controllers\PrimaryTableFoodController.cs" />
+    <Compile Include="Controllers\PrimaryTableSpiritController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -238,6 +240,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\PrimaryTableFitness\" />
+    <Folder Include="Views\PrimaryTableFood\" />
+    <Folder Include="Views\PrimaryTableSpirit\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -251,6 +256,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HealthApp.Models\HealthApp.Models.csproj">
+      <Project>{654A6B07-E72F-4398-BB0F-B8E08E0B550A}</Project>
+      <Name>HealthApp.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HealthApp.Services\HealthApp.Services.csproj">
+      <Project>{6F45BDB1-E689-4AA2-AE26-20680C91165F}</Project>
+      <Name>HealthApp.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
