@@ -54,11 +54,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Excersise.cs" />
+    <Compile Include="ExcersiseTypeTable.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="MuscleGroupTable.cs" />
     <Compile Include="PrimaryTableFitness.cs" />
     <Compile Include="PrimaryTableFood.cs" />
     <Compile Include="PrimaryTableSpirit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetsDataTable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

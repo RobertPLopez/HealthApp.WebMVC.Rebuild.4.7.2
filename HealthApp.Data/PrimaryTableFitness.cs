@@ -8,8 +8,13 @@ using System.Threading.Tasks;
 
 namespace HealthApp.Data
 {
-    public class PrimaryTableFitness
+    public partial class PrimaryTableFitness
     {
+        public PrimaryCollection()
+        {
+            Excersises = new HashSet<Excersise>();
+        }
+
         [Key]
         public int WorkoutId { get; set; }
         [ForeignKey("Profile Number")]
@@ -21,5 +26,7 @@ namespace HealthApp.Data
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
+
+        public virtual ICollection<Excersise> Excersises { get; set;} 
     }
 }
