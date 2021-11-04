@@ -17,14 +17,14 @@ namespace HealthApp.Data
         [Key]
         public int ExcersiseTypeId { get; set; }
         //Need to set up the Enum
-        public enum PreformedMovements { get; set; }
+        public enum PreformedMovement { get; set; }
 
         [Required]
         public string ExcersiseName { get; set; }
         [Required]
         public ICollection<MuscleGroupTable> MuscleGroups { get; set; }
 
-        public enum PreformedMovements
+        public enum PreformedMovement
         { 
             Cardio, 
             Weights, 
@@ -32,3 +32,8 @@ namespace HealthApp.Data
         }
     }
 }
+
+//Three basic questions 
+//1) how are we suposed to represent enums in this template 
+//2) do the icollection data set all require the full crud? 
+//3) if not am I am on the right path for the I collection templates. 
