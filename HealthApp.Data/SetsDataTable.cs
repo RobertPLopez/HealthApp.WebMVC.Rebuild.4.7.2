@@ -13,11 +13,14 @@ namespace HealthApp.Data
         public int SetId { get; set; }
         [Required]
         public int RepsPerSet { get; set; }
+        [Required]
         //Need to figure out how to make nullable
-        public int Weight { get; set; }
+        public int? Weight { get; set; }
+        [Required]
         //Need to figure out how to make nullable
-        public int DistanceRan { get; set; }
+        public int? DistanceRan { get; set; }
+         [Required]
         //Need to figure out how to make nullable
-        public int TimeRan { get; set; }
+        public int? TimeRan { get; set; }
     }
 }
