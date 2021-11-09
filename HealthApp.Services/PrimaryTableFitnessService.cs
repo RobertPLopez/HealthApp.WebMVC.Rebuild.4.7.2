@@ -57,7 +57,6 @@ namespace HealthApp.Services
             }
         }
 
-        //Not quite sure what the error here relates to 
         public PrimaryTableFitnessDetail GetPrimaryTableFitnessById(int id)
         {
             using (var ctx = new ApplicationDbContext())

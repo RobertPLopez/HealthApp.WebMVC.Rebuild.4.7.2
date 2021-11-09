@@ -10,6 +10,7 @@ namespace HealthApp.Models.ExcersiseTable
     public class ExcersiseEdit
     {
         public int ExcersiseId { get; set; }
+        public Guid OwnerId { get; set; }
         public int WorkoutId { get; set; }
         public int ExcersiseTypeId { get; set; }
         public ICollection<SetsDataTable> Sets { get; set; }

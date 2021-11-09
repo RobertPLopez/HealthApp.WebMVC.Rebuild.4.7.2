@@ -17,6 +17,8 @@ namespace HealthApp.Data
 
         [Key]
         public int ExcersiseId {get; set;}
+        [ForeignKey("Profile Number")]
+        public Guid OwnerId { get; set; }
         [ForeignKey("Workout Number")]
         public int WorkoutId { get; set; }
         [ForeignKey("Workout Type Id")]
