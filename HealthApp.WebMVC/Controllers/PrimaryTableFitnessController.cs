@@ -114,7 +114,7 @@ namespace HealthApp.WebMVC.Controllers
         {
             var service = CreatePrimaryTableFitnessTableServices();
 
-            service.PrimaryTableFitnessDelete(id);
+                 service.PrimaryTableFitnessDelete(id);
 
             TempData["SaveREsult"] = "Your plan was deleted";
 

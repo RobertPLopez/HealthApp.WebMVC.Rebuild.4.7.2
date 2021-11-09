@@ -172,6 +172,7 @@
     <Compile Include="Controllers\ExcersiseTypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MuscleGroupController.cs" />
     <Compile Include="Controllers\PrimaryTableFitnessController.cs" />
     <Compile Include="Controllers\PrimaryTableFoodController.cs" />
     <Compile Include="Controllers\PrimaryTableSpiritController.cs" />
@@ -244,6 +245,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\ExcersiseType\" />
     <Folder Include="Views\Excersise\" />
+    <Folder Include="Views\MuscleGroup\" />
     <Folder Include="Views\PrimaryTableFitness\" />
     <Folder Include="Views\PrimaryTableFood\" />
     <Folder Include="Views\PrimaryTableSpirit\" />

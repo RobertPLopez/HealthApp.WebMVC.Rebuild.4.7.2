@@ -12,6 +12,8 @@ namespace HealthApp.Data
     {
         [Required]
         public string MuscleGroupWorkedName { get; set; }
+        [Required]
+        public int MuscleGroupWorkedNameId { get; set; }
         [ForeignKey("Profile Number")]
         public Guid OwnerId { get; set; }
     }

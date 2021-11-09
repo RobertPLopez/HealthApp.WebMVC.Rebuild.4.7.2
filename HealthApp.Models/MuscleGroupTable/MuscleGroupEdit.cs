@@ -9,5 +9,6 @@ namespace HealthApp.Models.MuscleGroupTable
     public class MuscleGroupEdit
     {
         public string MuscleGroupWorkedName { get; set; }
+        public int MuscleGroupWorkedNameId { get; set; }
     }
 }
