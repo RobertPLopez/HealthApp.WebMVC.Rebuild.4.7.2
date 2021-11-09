@@ -86,9 +86,9 @@ namespace HealthApp.WebMVC.Controllers
 
             var service = CreatePrimaryTableFitnessTableServices();
 
-            if (service.UpdatePrimaryTableFitness(model)) //not sure why this is erroring out
+            if (service.UpdatePrimaryTableFitness(model))
             {
-                //TempData["SaveResult"] = "Your plan has been updated.";
+                TempData["SaveResult"] = "Your plan has been updated.";
                 return RedirectToAction("Index");
             }
 

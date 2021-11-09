@@ -9,7 +9,7 @@ using static HealthApp.WebMVC.Data.ApplicationUser;
 
 namespace HealthApp.Services
 {
-    class ExcersiseTableService
+    public class ExcersiseTableService
     {
         private readonly Guid _userId;
         public ExcersiseTableService(Guid userId)
@@ -17,7 +17,7 @@ namespace HealthApp.Services
             _userId = userId;
         }
 
-        public bool CreatePrimaryFitnessTable(ExcersiseCreate model)
+        public bool CreateExcersiseTable(ExcersiseCreate model)
         {
             var entity =
                 new Excersise()
