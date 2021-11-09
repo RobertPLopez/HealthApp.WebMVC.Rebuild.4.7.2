@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HealthApp.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -16,8 +17,8 @@ namespace HealthApp.Models.PrimaryTableFitness
         public int WorkoutId { get; set; }
         [Required]
         public Guid OwnerId { get; set; }
-            //[Required]
-            //ICollection object in the data layer
+        [Required]
+        public ICollection<Excersise> Excersises { get; set; }
         [Required]
         public int TotalCaloriesBurned { get; set; }
         [Required]

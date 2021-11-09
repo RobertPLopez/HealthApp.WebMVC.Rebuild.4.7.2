@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcersiseTable\ExcersiseCreate.cs" />
+    <Compile Include="ExcersiseTable\ExcersiseDetail.cs" />
+    <Compile Include="ExcersiseTable\ExcersiseEdit.cs" />
+    <Compile Include="ExcersiseTable\ExcersiseListItem.cs" />
     <Compile Include="PrimaryTableFitness\PrimaryTableFitnessCreate.cs" />
     <Compile Include="PrimaryTableFitness\PrimaryTableFitnessDetail.cs" />
     <Compile Include="PrimaryTableFitness\PrimaryTableFitnessEdit.cs" />
@@ -56,6 +60,11 @@
     <Compile Include="PrimaryTableSpirit\SpiritListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\HealthApp.Data\HealthApp.Data.csproj">
+      <Project>{0BDC1E4C-80BA-410D-ABFA-0F51AFE566E0}</Project>
+      <Name>HealthApp.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

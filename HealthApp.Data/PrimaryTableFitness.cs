@@ -10,7 +10,7 @@ namespace HealthApp.Data
 {
     public partial class PrimaryTableFitness
     {
-        public PrimaryCollection()
+        public ExcersiseCollectionTable()
         {
             Excersises = new HashSet<Excersise>();
         }
@@ -19,14 +19,12 @@ namespace HealthApp.Data
         public int WorkoutId { get; set; }
         [ForeignKey("Profile Number")]
         public Guid OwnerId { get; set; }
-        //[Required]
-        //public ICollection <Excersises> : ExcersiseTabele I need to be able to connect this to the sub fitness tables 
+        [Required]
+        public ICollection<Excersise> Excersises { get; set; }
         [Required]
         public int TotalCaloriesBurned { get; set; }
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
-
-        public virtual ICollection<Excersise> Excersises { get; set;} 
     }
 }

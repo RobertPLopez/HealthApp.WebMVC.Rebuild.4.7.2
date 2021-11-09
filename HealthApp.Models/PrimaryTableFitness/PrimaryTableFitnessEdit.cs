@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HealthApp.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace HealthApp.Models.PrimaryTableFitness
 {
     public class PrimaryTableFitnessEdit
     {
-        //public ICollection <Excersises> : ExcersiseTabele I need to be able to connect this to the sub fitness tables 
+        public ICollection<Excersise> Excersises { get; set; }
         public int WorkoutId { get; set; }
         public int TotalCaloriesBurned { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
