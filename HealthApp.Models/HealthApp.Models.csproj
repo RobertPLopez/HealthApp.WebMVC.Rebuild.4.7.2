@@ -50,6 +50,10 @@
     <Compile Include="ExcersiseTypeTable\ExcersiseTypeDetail.cs" />
     <Compile Include="ExcersiseTypeTable\ExcersiseTypeEdit.cs" />
     <Compile Include="ExcersiseTypeTable\ExcersiseTypeListItem.cs" />
+    <Compile Include="MuscleGroupTable\MuscleGroupCreate.cs" />
+    <Compile Include="MuscleGroupTable\MuscleGroupDetail.cs" />
+    <Compile Include="MuscleGroupTable\MuscleGroupEdit.cs" />
+    <Compile Include="MuscleGroupTable\MuscleGroupListItem.cs" />
     <Compile Include="PrimaryTableFitness\PrimaryTableFitnessCreate.cs" />
     <Compile Include="PrimaryTableFitness\PrimaryTableFitnessDetail.cs" />
     <Compile Include="PrimaryTableFitness\PrimaryTableFitnessEdit.cs" />

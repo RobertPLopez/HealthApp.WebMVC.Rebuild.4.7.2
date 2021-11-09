@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HealthApp.Data
+namespace HealthApp.Models.MuscleGroupTable
 {
-    public class MuscleGroupTable
+    public class MuscleGroupDetail
     {
         [Required]
         public string MuscleGroupWorkedName { get; set; }
