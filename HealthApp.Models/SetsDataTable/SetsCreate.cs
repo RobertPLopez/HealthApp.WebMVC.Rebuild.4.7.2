@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HealthApp.Data
+namespace HealthApp.Models.SetsDataTable
 {
-    public class SetsDataTable
+    public class SetsCreate
     {
         [Key]
         public int SetId { get; set; }
@@ -22,7 +22,7 @@ namespace HealthApp.Data
         [Required]
         //Need to figure out how to make nullable
         public int? DistanceRan { get; set; }
-         [Required]
+        [Required]
         //Need to figure out how to make nullable
         public int? TimeRan { get; set; }
     }

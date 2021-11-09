@@ -67,6 +67,10 @@
     <Compile Include="PrimaryTableSpirit\SpiritEdit.cs" />
     <Compile Include="PrimaryTableSpirit\SpiritListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetsDataTable\SetsCreate.cs" />
+    <Compile Include="SetsDataTable\SetsDetail.cs" />
+    <Compile Include="SetsDataTable\SetsEdit.cs" />
+    <Compile Include="SetsDataTable\SetsListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HealthApp.Data\HealthApp.Data.csproj">
