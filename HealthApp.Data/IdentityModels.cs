@@ -40,6 +40,14 @@ namespace HealthApp.WebMVC.Data
 
             public DbSet<PrimaryTableFood> FoodTables { get; set; }
 
+            public DbSet<Excersise> Excersises { get; set; }
+
+            public DbSet<ExcersiseTypeTable> ExcersiseTypes { get; set; }
+
+            public DbSet<MuscleGroupTable> MuscleGroups { get; set; }
+
+            public DbSet<SetsDataTable> SetsDataTables { get; set; }
+
             protected override void OnModelCreating(DbModelBuilder modelBuilder)
             {
                 modelBuilder

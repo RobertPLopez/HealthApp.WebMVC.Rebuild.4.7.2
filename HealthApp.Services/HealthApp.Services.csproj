@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcersiseTableService.cs" />
     <Compile Include="PrimaryTableFitnessService.cs" />
     <Compile Include="PrimaryTableFoodService.cs" />
     <Compile Include="PrimaryTableSpiritService.cs" />
