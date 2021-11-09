@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HealthApp.Models.ExcersiseTable
 {
-    class ExcersiseDetail
+    public class ExcersiseDetail
     {
         [Key]
         public int ExcersiseId { get; set; }

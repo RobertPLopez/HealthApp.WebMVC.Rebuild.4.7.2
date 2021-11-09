@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HealthApp.Models.ExcersiseTable
 {
-    class ExcersiseEdit
+    public class ExcersiseEdit
     {
         public int ExcersiseId { get; set; }
         public int WorkoutId { get; set; }

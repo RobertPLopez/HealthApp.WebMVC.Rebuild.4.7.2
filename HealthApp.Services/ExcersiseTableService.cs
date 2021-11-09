@@ -1,8 +1,11 @@
-﻿using System;
+﻿using HealthApp.Data;
+using HealthApp.Models.ExcersiseTable;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static HealthApp.WebMVC.Data.ApplicationUser;
 
 namespace HealthApp.Services
 {
@@ -17,17 +20,16 @@ namespace HealthApp.Services
         public bool CreatePrimaryFitnessTable(ExcersiseCreate model)
         {
             var entity =
-                new PrimaryTableFitness()
+                new Excersise()
                 {
+                    ExcersiseId = model.ExcersiseId,
                     WorkoutId = model.WorkoutId,
-                    OwnerId = model.OwnerId,
-                    TotalCaloriesBurned = model.TotalCaloriesBurned,
-                    CreatedUtc = DateTimeOffset.Now
+                    ExcersiseTypeId = model.ExcersiseTypeId,
                 };
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.FitnessTables.Add(entity);
+                ctx.Excersises.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
