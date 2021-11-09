@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace HealthApp.Models.ExcersiseTypeTable
 {
-    class ExcersiseTypeEdit
+    public class ExcersiseTypeEdit
     {
+        public int ExcersiseTypeId { get; set; }
         public string PreformedMovement { get; set; }
 
         public string ExcersiseName { get; set; }
