@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="ExcersiseTableService.cs" />
     <Compile Include="ExcersiseTypeServices.cs" />
+    <Compile Include="MuscleGroupServices.cs" />
     <Compile Include="PrimaryTableFitnessService.cs" />
     <Compile Include="PrimaryTableFoodService.cs" />
     <Compile Include="PrimaryTableSpiritService.cs" />
