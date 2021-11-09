@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HealthApp.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -6,15 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HealthApp.Data
+namespace HealthApp.Models.ExcersiseTypeTable
 {
-    public class ExcersiseTypeTable
+    class ExcersiseTypeDetail
     {
-        public MuscleGroupCollection()
-        {
-            MuscleGroups = new HashSet<MuscleGroupTable>();
-        }
-
         [Key]
         public int ExcersiseTypeId { get; set; }
         [ForeignKey("Profile Number")]
@@ -29,8 +25,3 @@ namespace HealthApp.Data
         public ICollection<MuscleGroupTable> MuscleGroups { get; set; }
     }
 }
-
-//Three basic questions 
-//1) how are we suposed to represent enums in this template 
-//2) do the icollection data set all require the full crud? 
-//3) if not am I am on the right path for the I collection templates. 

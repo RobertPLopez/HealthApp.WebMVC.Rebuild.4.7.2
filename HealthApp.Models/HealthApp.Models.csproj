@@ -46,6 +46,10 @@
     <Compile Include="ExcersiseTable\ExcersiseDetail.cs" />
     <Compile Include="ExcersiseTable\ExcersiseEdit.cs" />
     <Compile Include="ExcersiseTable\ExcersiseListItem.cs" />
+    <Compile Include="ExcersiseTypeTable\ExcersiseTypeCreate.cs" />
+    <Compile Include="ExcersiseTypeTable\ExcersiseTypeDetail.cs" />
+    <Compile Include="ExcersiseTypeTable\ExcersiseTypeEdit.cs" />
+    <Compile Include="ExcersiseTypeTable\ExcersiseTypeListItem.cs" />
     <Compile Include="PrimaryTableFitness\PrimaryTableFitnessCreate.cs" />
     <Compile Include="PrimaryTableFitness\PrimaryTableFitnessDetail.cs" />
     <Compile Include="PrimaryTableFitness\PrimaryTableFitnessEdit.cs" />
