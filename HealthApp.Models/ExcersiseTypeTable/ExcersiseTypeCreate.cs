@@ -22,7 +22,5 @@ namespace HealthApp.Models.ExcersiseTypeTable
 
         [Required]
         public string ExcersiseName { get; set; }
-        [Required]
-        public ICollection<MuscleGroupTable> MuscleGroups { get; set; }
     }
 }

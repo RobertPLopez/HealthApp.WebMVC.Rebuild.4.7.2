@@ -17,7 +17,5 @@ namespace HealthApp.Models.ExcersiseTable
         public int WorkoutId { get; set; }
         [ForeignKey("Workout Type Id")]
         public int ExcersiseTypeId { get; set; }
-        [Required]
-        public ICollection<SetsDataTable> Sets { get; set; }
     }
 }
