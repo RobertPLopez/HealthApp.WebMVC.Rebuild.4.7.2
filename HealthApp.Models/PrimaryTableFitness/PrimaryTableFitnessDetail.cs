@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HealthApp.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,8 +14,8 @@ namespace HealthApp.Models.PrimaryTableFitness
         [Display(Name = "Your Fitness Plan!")]
         public int WorkoutId { get; set; }
         public Guid OwnerId { get; set; }
-        //[Required]
-        //public ICollection <Excersises> : ExcersiseTabele I need to be able to connect this to the sub fitness tables 
+        [Required]
+        public ICollection<Excersise> Excersises { get; set; }
         [Required]
         [Display(Name = "This is the total number of calories burned!")]
         public int TotalCaloriesBurned { get; set; }

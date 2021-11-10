@@ -57,10 +57,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcersiseTableService.cs" />
+    <Compile Include="ExcersiseTypeServices.cs" />
+    <Compile Include="MuscleGroupServices.cs" />
     <Compile Include="PrimaryTableFitnessService.cs" />
     <Compile Include="PrimaryTableFoodService.cs" />
     <Compile Include="PrimaryTableSpiritService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetsServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HealthApp.Data\HealthApp.Data.csproj">

@@ -1,6 +1,5 @@
 ﻿using HealthApp.Data;
-using HealthApp.Models.PrimaryTableFitness;
-using HealthApp.WebMVC.Data;
+using HealthApp.Models.ExcersiseTable;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,100 +9,97 @@ using static HealthApp.WebMVC.Data.ApplicationUser;
 
 namespace HealthApp.Services
 {
-    public class PrimaryTableFitnessService
+    public class ExcersiseTableService
     {
         private readonly Guid _userId;
-        public PrimaryTableFitnessService(Guid userId)
+        public ExcersiseTableService(Guid userId)
         {
             _userId = userId;
         }
 
-        public bool CreatePrimaryFitnessTable(PrimaryTableFitnessCreate model)
+        public bool CreateExcersiseTable(ExcersiseCreate model)
         {
             var entity =
-                new PrimaryTableFitness()
+                new Excersise()
                 {
+                    ExcersiseId = model.ExcersiseId,
                     WorkoutId = model.WorkoutId,
-                    OwnerId = model.OwnerId,
-                    TotalCaloriesBurned = model.TotalCaloriesBurned,
-                    CreatedUtc = DateTimeOffset.Now
+                    ExcersiseTypeId = model.ExcersiseTypeId,
                 };
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.FitnessTables.Add(entity);
+                ctx.Excersises.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public IEnumerable<PrimaryTableFitnessListItem> GetPrimaryTableFitness()
+        public IEnumerable<ExcersiseListItem> GetExcersiseTable()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
-                    .FitnessTables
+                    .Excersises
                     .Where(e => e.OwnerId == _userId)
                     .Select(
                         e =>
-                        new PrimaryTableFitnessListItem
+                        new ExcersiseListItem
                         {
+                            ExcersiseId = e.ExcersiseId,
                             WorkoutId = e.WorkoutId,
-                            TotalCaloriesBurned = e.TotalCaloriesBurned,
-                            CreatedUtc = e.CreatedUtc
+                            ExcersiseTypeId = e.ExcersiseTypeId,
                         }
                     );
                 return query.ToArray();
             }
         }
 
-        public PrimaryTableFitnessDetail GetPrimaryTableFitnessById(int id)
+        public ExcersiseDetail GetExcersiseTableById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                    .FitnessTables
-                    .Single(e => e.WorkoutId == id && e.OwnerId == _userId);
+                    .Excersises
+                    .Single(e => e.ExcersiseId == id && e.OwnerId == _userId);
 
                 return
-                    new PrimaryTableFitnessDetail
+                    new ExcersiseDetail
                     {
                         OwnerId = entity.OwnerId,
+                        ExcersiseId = entity.ExcersiseId,
                         WorkoutId = entity.WorkoutId,
-                        TotalCaloriesBurned = entity.TotalCaloriesBurned,
-                        CreatedUtc = entity.CreatedUtc,
-                        ModifiedUtc = entity.ModifiedUtc,
+                        ExcersiseTypeId = entity.ExcersiseTypeId,
                     };
             }
         }
 
-        public bool UpdatePrimaryTableFitness(PrimaryTableFitnessEdit model)
+        public bool UpdateExcersiseTable(ExcersiseEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .FitnessTables
-                        .Single(e => e.WorkoutId == model.WorkoutId && e.OwnerId == _userId);
+                        .Excersises
+                        .Single(e => e.ExcersiseId == model.ExcersiseId && e.OwnerId == _userId);
 
+                entity.ExcersiseId = model.ExcersiseId;
                 entity.WorkoutId = model.WorkoutId;
-                entity.TotalCaloriesBurned = model.TotalCaloriesBurned;
-                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+                entity.ExcersiseTypeId = model.ExcersiseTypeId;
 
                 return ctx.SaveChanges() == 1;
             }
         }
-
-        public bool PrimaryTableFitnessDelete(int MyFitnessPlan)
+        public bool ExcersiseTableDelete(int MyFitnessPlan)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                    .FitnessTables
-                    .Single(e => e.WorkoutId == MyFitnessPlan && e.OwnerId == _userId);
-                ctx.FitnessTables.Remove(entity);
+                    .Excersises
+                    .Single(e => e.ExcersiseId == MyFitnessPlan && e.OwnerId == _userId);
+                ctx.Excersises.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
             }

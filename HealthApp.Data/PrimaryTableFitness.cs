@@ -8,14 +8,19 @@ using System.Threading.Tasks;
 
 namespace HealthApp.Data
 {
-    public class PrimaryTableFitness
+    public partial class PrimaryTableFitness
     {
+        public PrimaryTableFitness()
+        {
+            Excersises = new HashSet<Excersise>();
+        }
+
         [Key]
         public int WorkoutId { get; set; }
         [ForeignKey("Profile Number")]
         public Guid OwnerId { get; set; }
-        //[Required]
-        //public ICollection <Excersises> : ExcersiseTabele I need to be able to connect this to the sub fitness tables 
+        [Required]
+        public ICollection<Excersise> Excersises { get; set; }
         [Required]
         public int TotalCaloriesBurned { get; set; }
         [Required]

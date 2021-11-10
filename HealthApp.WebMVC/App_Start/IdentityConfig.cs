@@ -11,6 +11,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using HealthApp.WebMVC.Models;
+using static HealthApp.WebMVC.Data.ApplicationUser;
+using HealthApp.WebMVC.Data;
 
 namespace HealthApp.WebMVC
 {

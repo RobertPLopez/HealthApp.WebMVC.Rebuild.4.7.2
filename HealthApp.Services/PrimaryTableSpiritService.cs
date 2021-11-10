@@ -1,12 +1,13 @@
 ﻿using HealthApp.Data;
 using HealthApp.Models.PrimaryTableFitness;
 using HealthApp.Models.PrimaryTableSpirit;
+using HealthApp.WebMVC.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static HealthApp.WebMVC.Models.ApplicationUser;
+using static HealthApp.WebMVC.Data.ApplicationUser;
 
 namespace HealthApp.Services
 {
@@ -110,7 +111,8 @@ namespace HealthApp.Services
                 entity.MyRestHours = model.MyRestHours;
                 entity.OutsideMotivation = model.OutsideMotivation;
                 entity.InternalMotivaiton = model.InternalMotivaiton;
-                entity.CreatedUtc = DateTimeOffset.UtcNow;
+                entity.CreatedUtc = model.CreatedUtc;
+                entity.ModifiedUtc = DateTimeOffset.Now;
 
                 return ctx.SaveChanges() == 1;
             }

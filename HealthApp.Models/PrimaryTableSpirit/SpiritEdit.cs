@@ -23,5 +23,6 @@ namespace HealthApp.Models.PrimaryTableSpirit
         public string InternalMotivaiton { get; set; }
 
         public DateTimeOffset CreatedUtc { get; set; }
+        public DateTimeOffset ModifiedUtc { get; set; }
     }
 }

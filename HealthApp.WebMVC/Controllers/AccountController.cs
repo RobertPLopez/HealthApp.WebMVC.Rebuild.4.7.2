@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using HealthApp.WebMVC.Models;
+using HealthApp.WebMVC.Data;
 
 namespace HealthApp.WebMVC.Controllers
 {

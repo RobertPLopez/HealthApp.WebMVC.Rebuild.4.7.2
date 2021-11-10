@@ -42,6 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcersiseTable\ExcersiseCreate.cs" />
+    <Compile Include="ExcersiseTable\ExcersiseDetail.cs" />
+    <Compile Include="ExcersiseTable\ExcersiseEdit.cs" />
+    <Compile Include="ExcersiseTable\ExcersiseListItem.cs" />
+    <Compile Include="ExcersiseTypeTable\ExcersiseTypeCreate.cs" />
+    <Compile Include="ExcersiseTypeTable\ExcersiseTypeDetail.cs" />
+    <Compile Include="ExcersiseTypeTable\ExcersiseTypeEdit.cs" />
+    <Compile Include="ExcersiseTypeTable\ExcersiseTypeListItem.cs" />
+    <Compile Include="MuscleGroupTable\MuscleGroupCreate.cs" />
+    <Compile Include="MuscleGroupTable\MuscleGroupDetail.cs" />
+    <Compile Include="MuscleGroupTable\MuscleGroupEdit.cs" />
+    <Compile Include="MuscleGroupTable\MuscleGroupListItem.cs" />
     <Compile Include="PrimaryTableFitness\PrimaryTableFitnessCreate.cs" />
     <Compile Include="PrimaryTableFitness\PrimaryTableFitnessDetail.cs" />
     <Compile Include="PrimaryTableFitness\PrimaryTableFitnessEdit.cs" />
@@ -55,7 +67,16 @@
     <Compile Include="PrimaryTableSpirit\SpiritEdit.cs" />
     <Compile Include="PrimaryTableSpirit\SpiritListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetsDataTable\SetsCreate.cs" />
+    <Compile Include="SetsDataTable\SetsDetail.cs" />
+    <Compile Include="SetsDataTable\SetsEdit.cs" />
+    <Compile Include="SetsDataTable\SetsListItem.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\HealthApp.Data\HealthApp.Data.csproj">
+      <Project>{0BDC1E4C-80BA-410D-ABFA-0F51AFE566E0}</Project>
+      <Name>HealthApp.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
