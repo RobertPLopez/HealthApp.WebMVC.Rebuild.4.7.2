@@ -10,7 +10,7 @@ namespace HealthApp.Data
 {
     public class ExcersiseTypeTable
     {
-        public MuscleGroupCollection()
+        public ExcersiseTypeTable()
         {
             MuscleGroups = new HashSet<MuscleGroupTable>();
         }
@@ -31,6 +31,5 @@ namespace HealthApp.Data
 }
 
 //Three basic questions 
-//1) how are we suposed to represent enums in this template 
 //2) do the icollection data set all require the full crud? 
 //3) if not am I am on the right path for the I collection templates. 

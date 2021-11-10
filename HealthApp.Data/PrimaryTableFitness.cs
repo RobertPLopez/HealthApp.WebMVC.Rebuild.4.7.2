@@ -10,7 +10,7 @@ namespace HealthApp.Data
 {
     public partial class PrimaryTableFitness
     {
-        public ExcersiseCollectionTable()
+        public PrimaryTableFitness()
         {
             Excersises = new HashSet<Excersise>();
         }

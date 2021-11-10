@@ -10,7 +10,7 @@ namespace HealthApp.Data
 {
     public class Excersise
     {
-        public ExcersiseCollection()
+        public Excersise()
         {
             Sets = new HashSet<SetsDataTable>();
         }
