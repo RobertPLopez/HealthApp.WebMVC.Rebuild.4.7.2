@@ -49,7 +49,7 @@ namespace HealthApp.WebMVC.Controllers
         }
 
         //Get: Set  table details
-        public ActionResult PrimaryTableFitnessDetails(int id)
+        public ActionResult SetsTableDetails(int id)
         {
             var svc = CreateSetServicesTableServices();
             var model = svc.GetSetTableById(id);

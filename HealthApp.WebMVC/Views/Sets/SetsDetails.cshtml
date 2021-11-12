@@ -1,0 +1,58 @@
+﻿@model HealthApp.Models.SetsDataTable.SetsDetail
+
+@{
+    ViewBag.Title = "SetsDetails";
+}
+
+<h2>SetsDetails</h2>
+
+<div>
+    <h4>SetsDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepsPerSet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepsPerSet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DistanceRan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DistanceRan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeRan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeRan)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SetId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,50 @@
+﻿@model HealthApp.Models.PrimaryTableFitness.PrimaryTableFitnessDetail
+
+@{
+    ViewBag.Title = "PrimaryTableFitnessDetails";
+}
+
+<h2>PrimaryTableFitnessDetails</h2>
+
+<div>
+    <h4>PrimaryTableFitnessDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCaloriesBurned)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCaloriesBurned)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUtc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.WorkoutId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

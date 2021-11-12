@@ -1,0 +1,82 @@
+﻿@model HealthApp.Models.PrimaryTableSpirit.SpiritDetail
+
+@{
+    ViewBag.Title = "PrimaryTableSpiritDetails";
+}
+
+<h2>PrimaryTableSpiritDetails</h2>
+
+<div>
+    <h4>SpiritDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HowIViewOthers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HowIViewOthers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HowOtherPerceiveMe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HowOtherPerceiveMe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MySocialCircle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MySocialCircle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyRestHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyRestHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutsideMotivation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutsideMotivation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InternalMotivaiton)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InternalMotivaiton)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUtc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HowIViewMe }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -256,13 +256,29 @@
     <Content Include="Views\MuscleGroup\MuscleGroupTableDetails.cshtml" />
     <Content Include="Views\MuscleGroup\MuscleGroupTableEdit.cshtml" />
     <Content Include="Views\MuscleGroup\MuscleGroupTableDelete.cshtml" />
+    <Content Include="Views\PrimaryTableFitness\PrimaryTableFitnessIndex.cshtml" />
+    <Content Include="Views\PrimaryTableFitness\PrimaryTableFitnessCreate.cshtml" />
+    <Content Include="Views\PrimaryTableFitness\PrimaryTableFitnessDetails.cshtml" />
+    <Content Include="Views\PrimaryTableFitness\PrimaryTableFitnessEdit.cshtml" />
+    <Content Include="Views\PrimaryTableFitness\PrimaryTableFitnessDelete.cshtml" />
+    <Content Include="Views\PrimaryTableFood\PrimaryTableFoodIndex.cshtml" />
+    <Content Include="Views\PrimaryTableFood\PrimaryTableFoodCreate.cshtml" />
+    <Content Include="Views\PrimaryTableFood\PrimaryTableFoodDetails.cshtml" />
+    <Content Include="Views\PrimaryTableFood\PrimaryTableFoodDelete.cshtml" />
+    <Content Include="Views\PrimaryTableFood\PrimaryTableFoodEdit.cshtml" />
+    <Content Include="Views\PrimaryTableSpirit\PrimaryTableSpiritIndex.cshtml" />
+    <Content Include="Views\PrimaryTableSpirit\PrimaryTableSpiritCreate.cshtml" />
+    <Content Include="Views\PrimaryTableSpirit\PrimaryTableSpiritDetails.cshtml" />
+    <Content Include="Views\PrimaryTableSpirit\PrimaryTableSpiritEdit.cshtml" />
+    <Content Include="Views\PrimaryTableSpirit\PrimaryTableSpiritDelete.cshtml" />
+    <Content Include="Views\Sets\SetsIndex.cshtml" />
+    <Content Include="Views\Sets\SetsCreate.cshtml" />
+    <Content Include="Views\Sets\SetsDetails.cshtml" />
+    <Content Include="Views\Sets\SetsEdit.cshtml" />
+    <Content Include="Views\Sets\SetsDelete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\PrimaryTableFitness\" />
-    <Folder Include="Views\PrimaryTableFood\" />
-    <Folder Include="Views\PrimaryTableSpirit\" />
-    <Folder Include="Views\Sets\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
