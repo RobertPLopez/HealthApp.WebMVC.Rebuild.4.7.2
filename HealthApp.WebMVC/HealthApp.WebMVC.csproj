@@ -241,12 +241,24 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Excersise\ExcersiseTableIndex.cshtml" />
+    <Content Include="Views\Excersise\ExcersiseTableCreate.cshtml" />
+    <Content Include="Views\Excersise\ExcersiseTableDetails.cshtml" />
+    <Content Include="Views\Excersise\ExcersiseTableEdit.cshtml" />
+    <Content Include="Views\ExcersiseType\ExcersiseTypeTableIndex.cshtml" />
+    <Content Include="Views\ExcersiseType\ExcersiseTypeTableCreate.cshtml" />
+    <Content Include="Views\ExcersiseType\ExcersiseTypeTableDetails.cshtml" />
+    <Content Include="Views\ExcersiseType\ExcersiseTypeTableEdit.cshtml" />
+    <Content Include="Views\ExcersiseType\ExcersiseTypeTableDelete.cshtml" />
+    <Content Include="Views\Excersise\ExcersiseTableDelete.cshtml" />
+    <Content Include="Views\MuscleGroup\MuscleGroupTableIndex.cshtml" />
+    <Content Include="Views\MuscleGroup\MuscleGroupTableCreate.cshtml" />
+    <Content Include="Views\MuscleGroup\MuscleGroupTableDetails.cshtml" />
+    <Content Include="Views\MuscleGroup\MuscleGroupTableEdit.cshtml" />
+    <Content Include="Views\MuscleGroup\MuscleGroupTableDelete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\ExcersiseType\" />
-    <Folder Include="Views\Excersise\" />
-    <Folder Include="Views\MuscleGroup\" />
     <Folder Include="Views\PrimaryTableFitness\" />
     <Folder Include="Views\PrimaryTableFood\" />
     <Folder Include="Views\PrimaryTableSpirit\" />

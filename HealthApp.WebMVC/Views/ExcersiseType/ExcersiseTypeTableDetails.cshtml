@@ -1,0 +1,42 @@
+﻿@model HealthApp.Models.ExcersiseTypeTable.ExcersiseTypeDetail
+
+@{
+    ViewBag.Title = "PrimaryExcersiseTypeDetails";
+}
+
+<h2>PrimaryExcersiseTypeDetails</h2>
+
+<div>
+    <h4>ExcersiseTypeDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreformedMovement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreformedMovement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExcersiseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExcersiseName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ExcersiseTypeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

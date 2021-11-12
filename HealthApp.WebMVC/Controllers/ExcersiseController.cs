@@ -100,7 +100,7 @@ namespace HealthApp.WebMVC.Controllers
 
         //Get: ExcersiseTable Delete
         [ActionName("Delete")]
-        public ActionResult PrimaryTableFitnessDelete(int id)
+        public ActionResult ExcersiseTableDelete(int id)
         {
             var svc = CreateExcersiseTableServices();
             var model = svc.GetExcersiseTableById(id);
