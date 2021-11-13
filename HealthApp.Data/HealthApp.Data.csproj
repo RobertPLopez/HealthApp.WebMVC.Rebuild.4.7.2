@@ -72,9 +72,9 @@
     <Compile Include="Excersise.cs" />
     <Compile Include="ExcersiseTypeTable.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202111131617204_one.cs" />
-    <Compile Include="Migrations\202111131617204_one.Designer.cs">
-      <DependentUpon>202111131617204_one.cs</DependentUpon>
+    <Compile Include="Migrations\202111132245085_Initial.cs" />
+    <Compile Include="Migrations\202111132245085_Initial.Designer.cs">
+      <DependentUpon>202111132245085_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MuscleGroupTable.cs" />
@@ -89,8 +89,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202111131617204_one.resx">
-      <DependentUpon>202111131617204_one.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202111132245085_Initial.resx">
+      <DependentUpon>202111132245085_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -3,7 +3,7 @@ namespace HealthApp.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class one : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
