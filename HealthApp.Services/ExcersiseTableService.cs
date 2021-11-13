@@ -24,7 +24,7 @@ namespace HealthApp.Services
                 new Excersise()
                 {
                     ExcersiseId = model.ExcersiseId,
-                    WorkoutId = model.WorkoutId,
+                    //WorkoutId = model.WorkoutId,
                     ExcersiseTypeId = model.ExcersiseTypeId,
                 };
 
@@ -48,7 +48,7 @@ namespace HealthApp.Services
                         new ExcersiseListItem
                         {
                             ExcersiseId = e.ExcersiseId,
-                            WorkoutId = e.WorkoutId,
+                            //WorkoutId = e.WorkoutId,
                             ExcersiseTypeId = e.ExcersiseTypeId,
                         }
                     );
@@ -70,7 +70,7 @@ namespace HealthApp.Services
                     {
                         OwnerId = entity.OwnerId,
                         ExcersiseId = entity.ExcersiseId,
-                        WorkoutId = entity.WorkoutId,
+                        //WorkoutId = entity.WorkoutId,
                         ExcersiseTypeId = entity.ExcersiseTypeId,
                     };
             }
@@ -86,7 +86,7 @@ namespace HealthApp.Services
                         .Single(e => e.ExcersiseId == model.ExcersiseId && e.OwnerId == _userId);
 
                 entity.ExcersiseId = model.ExcersiseId;
-                entity.WorkoutId = model.WorkoutId;
+                //entity.WorkoutId = model.WorkoutId;
                 entity.ExcersiseTypeId = model.ExcersiseTypeId;
 
                 return ctx.SaveChanges() == 1;

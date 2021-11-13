@@ -10,11 +10,12 @@ namespace HealthApp.Data
 {
     public class MuscleGroupTable
     {
+        [Key]
+        public int MuscleGroupTableId { get; set; }
         [Required]
         public string MuscleGroupWorkedName { get; set; }
         [Required]
         public int MuscleGroupWorkedNameId { get; set; }
-        [ForeignKey("Profile Number")]
         public Guid OwnerId { get; set; }
     }
 }

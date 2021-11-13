@@ -5,14 +5,14 @@ namespace HealthApp.Data.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<HealthApp.WebMVC.Data.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<HealthApp.WebMVC.Data.ApplicationUser.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(HealthApp.WebMVC.Data.ApplicationDbContext context)
+        protected override void Seed(HealthApp.WebMVC.Data.ApplicationUser.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

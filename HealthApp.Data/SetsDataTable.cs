@@ -12,7 +12,6 @@ namespace HealthApp.Data
     {
         [Key]
         public int SetId { get; set; }
-        [ForeignKey("Profile Number")]
         public Guid OwnerId { get; set; }
         [Required]
         public int RepsPerSet { get; set; }
@@ -22,7 +21,7 @@ namespace HealthApp.Data
         [Required]
         //Need to figure out how to make nullable
         public int? DistanceRan { get; set; }
-         [Required]
+        [Required]
         //Need to figure out how to make nullable
         public int? TimeRan { get; set; }
     }
