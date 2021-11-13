@@ -82,7 +82,7 @@ namespace HealthApp.WebMVC.Data
     {
         public IdentityUserRoleConfiguration()
         {
-            HasKey(iul => iul.UserId);
+            HasKey(iur => iur.UserId);
         }
     }
 }
