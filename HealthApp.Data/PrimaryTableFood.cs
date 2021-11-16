@@ -12,7 +12,6 @@ namespace HealthApp.Data
     {
         [Key]
         public int FoodId { get; set; }
-        [ForeignKey("Profile Number")]
         public Guid OwnerId { get; set; }
         [Required]
         public string FoodName { get; set; }

@@ -12,7 +12,6 @@ namespace HealthApp.Data
     {
         [Key]
         public int HowIViewMe { get; set; }
-        [ForeignKey("Profile Number")]
         public Guid OwnerId { get; set; }
         [Required]
         public int HowIViewOthers { get; set; }

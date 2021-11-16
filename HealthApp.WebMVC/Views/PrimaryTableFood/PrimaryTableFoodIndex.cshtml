@@ -1,0 +1,69 @@
+﻿@model IEnumerable<HealthApp.Models.PrimaryTableFood.FoodListItem>
+
+@{
+    ViewBag.Title = "PrimaryTableFoodIndex";
+}
+
+<h2>PrimaryTableFoodIndex</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FoodName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalCaloriesConsumed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FoodContent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DailyWeight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CupsWaterDrank)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedUtc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FoodName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalCaloriesConsumed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FoodContent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DailyWeight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CupsWaterDrank)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedUtc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedUtc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FoodId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FoodId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FoodId })
+        </td>
+    </tr>
+}
+
+</table>

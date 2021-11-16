@@ -17,12 +17,10 @@ namespace HealthApp.Data
 
         [Key]
         public int ExcersiseId {get; set;}
-        [ForeignKey("Profile Number")]
         public Guid OwnerId { get; set; }
-        [ForeignKey("Workout Number")]
-        public int WorkoutId { get; set; }
-        [ForeignKey("Workout Type Id")]
+        [ForeignKey("ExerciseTypeTable")]
         public int ExcersiseTypeId { get; set; }
+        public ExcersiseTypeTable ExerciseTypeTable { get; set; }
         [Required]
         public ICollection<SetsDataTable> Sets { get; set; }
 
